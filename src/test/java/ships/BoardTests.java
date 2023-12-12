@@ -52,11 +52,11 @@ public class BoardTests {
     @Test
     public void isShipSunk() {
         //Na wygenerowanej w ten sposób planszy na podanych koordynatach znajduje się jednomasztowy statek
-        Board board = new Board().generiteAIBoard(1);
+        Board board = new Board().generateAIBoard(1);
         int coordinateX = 4;
         int coordinateY = 5;
 
-        boolean result = Board.isShipSunk(board, coordinateX, coordinateY);
+        boolean result = board.isShipSunk(coordinateX, coordinateY);
 
         Assertions.assertTrue(result);
     }
@@ -65,7 +65,7 @@ public class BoardTests {
     @Test
     public void checkForShipsHit() {
         //Na wygenerowanej w ten sposób planszy na podanych koordynatach znajduje się dwumasztowy statek
-        Board board = new Board().generiteAIBoard(1);
+        Board board = new Board().generateAIBoard(1);
         int coordinateX = 3;
         int coordinateY = 6;
 
@@ -80,7 +80,7 @@ public class BoardTests {
     public void AIBoardGeneration() {
         Board board;
 
-        Board result = new Board().generiteAIBoard();
+        Board result = new Board().generateAIBoard();
 
         Assertions.assertInstanceOf(Board.class, result);
     }

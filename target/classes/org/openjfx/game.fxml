@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox alignment="CENTER" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.GameController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="500.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <Label text="Twoja plansza">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+             <HBox alignment="TOP_RIGHT" maxWidth="350.0">
+                 <children>
+                     <Label alignment="CENTER" contentDisplay="CENTER" minHeight="32.0" minWidth="32.0" text="1">
+                         <font>
+                             <Font size="17.0" />
+                         </font></Label>
+                     <Label alignment="CENTER" contentDisplay="CENTER" minHeight="32.0" minWidth="32.0" text="2">
+                         <font>
+                             <Font size="17.0" />
+                         </font></Label>
+                     <Label alignment="CENTER" contentDisplay="CENTER" minHeight="32.0" minWidth="32.0" text="3">
+                         <font>
+                             <Font size="17.0" />
+                         </font></Label>
+                     <Label alignment="CENTER" contentDisplay="CENTER" minHeight="32.0" minWidth="32.0" text="4">
+                         <font>
+                             <Font size="17.0" />
+                         </font></Label>
+                     <Label alignment="CENTER" contentDisplay="CENTER" minHeight="32.0" minWidth="32.0" text="5">
+                         <font>
+                             <Font size="17.0" />
+                         </font></Label>
+                     <Label alignment="CENTER" contentDisplay="CENTER" minHeight="32.0" minWidth="32.0" text="6">
+                         <font>
+                             <Font size="17.0" />
+                         </font></Label>
+                     <Label alignment="CENTER" contentDisplay="CENTER" minHeight="32.0" minWidth="32.0" text="7">
+                         <font>
+                             <Font size="17.0" />
+                         </font></Label>
+                     <Label alignment="CENTER" contentDisplay="CENTER" minHeight="32.0" minWidth="32.0" text="8">
+                         <font>
+                             <Font size="17.0" />
+                         </font></Label>
+                     <Label alignment="CENTER" contentDisplay="CENTER" minHeight="32.0" minWidth="32.0" text="9">
+                         <font>
+                             <Font size="17.0" />
+                         </font></Label>
+                     <Label alignment="CENTER" contentDisplay="CENTER" minHeight="32.0" minWidth="32.0" text="10">
+                         <font>
+                             <Font size="17.0" />
+                         </font></Label>
+                 </children>
+             </HBox>
+            <HBox maxWidth="350.0" prefHeight="320.0" prefWidth="393.0">
+               <children>
+                   <VBox alignment="CENTER" minWidth="20.0" prefHeight="200.0" prefWidth="100.0">
+                       <children>
+                           <Label minHeight="32.0" text="1">
+                               <font>
+                                   <Font size="17.0" />
+                               </font></Label>
+                           <Label minHeight="32.0" text="2">
+                               <font>
+                                   <Font size="17.0" />
+                               </font></Label>
+                           <Label minHeight="32.0" text="3">
+                               <font>
+                                   <Font size="17.0" />
+                               </font></Label>
+                           <Label minHeight="32.0" text="4">
+                               <font>
+                                   <Font size="17.0" />
+                               </font></Label>
+                           <Label minHeight="32.0" text="5">
+                               <font>
+                                   <Font size="17.0" />
+                               </font></Label>
+                           <Label minHeight="32.0" text="6">
+                               <font>
+                                   <Font size="17.0" />
+                               </font></Label>
+                           <Label minHeight="32.0" text="7">
+                               <font>
+                                   <Font size="17.0" />
+                               </font></Label>
+                           <Label minHeight="32.0" text="8">
+                               <font>
+                                   <Font size="17.0" />
+                               </font></Label>
+                           <Label minHeight="32.0" text="9">
+                               <font>
+                                   <Font size="17.0" />
+                               </font></Label>
+                           <Label minHeight="32.0" text="10">
+                               <font>
+                                   <Font size="17.0" />
+                               </font></Label>
+                       </children>
+                   </VBox>
+                   <GridPane gridLinesVisible="true" maxHeight="320.0" maxWidth="320.0" prefHeight="314.0" prefWidth="316.0" style="-fx-background-color: #fff;">
+                       <columnConstraints>
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="32.0" minWidth="32.0" prefWidth="32.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="32.0" minWidth="32.0" prefWidth="32.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="32.0" minWidth="32.0" prefWidth="32.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="32.0" minWidth="32.0" prefWidth="32.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="32.0" minWidth="32.0" prefWidth="32.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="32.0" minWidth="32.0" prefWidth="32.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="32.0" minWidth="32.0" prefWidth="32.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="32.0" minWidth="32.0" prefWidth="32.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="32.0" minWidth="32.0" prefWidth="32.0" />
+                           <ColumnConstraints hgrow="SOMETIMES" maxWidth="32.0" minWidth="32.0" prefWidth="32.0" />
+                       </columnConstraints>
+                       <rowConstraints>
+                           <RowConstraints maxHeight="32.0" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="32.0" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="32.0" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="32.0" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="32.0" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="32.0" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="32.0" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="32.0" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="32.0" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                           <RowConstraints maxHeight="32.0" minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                       </rowConstraints>
+                       <children>
+                           <ImageView fx:id="playerBoardx0y0" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                           <ImageView fx:id="playerBoardx1y0" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                           <ImageView fx:id="playerBoardx2y0" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                           <ImageView fx:id="playerBoardx3y0" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                           <ImageView fx:id="playerBoardx4y0" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                           <ImageView fx:id="playerBoardx5y0" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+                           <ImageView fx:id="playerBoardx6y0" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+                           <ImageView fx:id="playerBoardx7y0" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="0" />
+                           <ImageView fx:id="playerBoardx8y0" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="0" />
+                           <ImageView fx:id="playerBoardx9y0" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="0" />
+      
+                           <ImageView fx:id="playerBoardx0y1" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                           <ImageView fx:id="playerBoardx1y1" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           <ImageView fx:id="playerBoardx2y1" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                           <ImageView fx:id="playerBoardx3y1" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                           <ImageView fx:id="playerBoardx4y1" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                           <ImageView fx:id="playerBoardx5y1" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                           <ImageView fx:id="playerBoardx6y1" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                           <ImageView fx:id="playerBoardx7y1" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                           <ImageView fx:id="playerBoardx8y1" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                           <ImageView fx:id="playerBoardx9y1" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+      
+                           <ImageView fx:id="playerBoardx0y2" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                           <ImageView fx:id="playerBoardx1y2" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           <ImageView fx:id="playerBoardx2y2" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                           <ImageView fx:id="playerBoardx3y2" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                           <ImageView fx:id="playerBoardx4y2" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                           <ImageView fx:id="playerBoardx5y2" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                           <ImageView fx:id="playerBoardx6y2" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                           <ImageView fx:id="playerBoardx7y2" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                           <ImageView fx:id="playerBoardx8y2" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                           <ImageView fx:id="playerBoardx9y2" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+      
+                           <ImageView fx:id="playerBoardx0y3" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                           <ImageView fx:id="playerBoardx1y3" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           <ImageView fx:id="playerBoardx2y3" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                           <ImageView fx:id="playerBoardx3y3" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                           <ImageView fx:id="playerBoardx4y3" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                           <ImageView fx:id="playerBoardx5y3" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                           <ImageView fx:id="playerBoardx6y3" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                           <ImageView fx:id="playerBoardx7y3" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                           <ImageView fx:id="playerBoardx8y3" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                           <ImageView fx:id="playerBoardx9y3" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+      
+                           <ImageView fx:id="playerBoardx0y4" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                           <ImageView fx:id="playerBoardx1y4" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                           <ImageView fx:id="playerBoardx2y4" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                           <ImageView fx:id="playerBoardx3y4" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                           <ImageView fx:id="playerBoardx4y4" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                           <ImageView fx:id="playerBoardx5y4" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                           <ImageView fx:id="playerBoardx6y4" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                           <ImageView fx:id="playerBoardx7y4" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                           <ImageView fx:id="playerBoardx8y4" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+                           <ImageView fx:id="playerBoardx9y4" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+      
+                           <ImageView fx:id="playerBoardx0y5" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                           <ImageView fx:id="playerBoardx1y5" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                           <ImageView fx:id="playerBoardx2y5" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                           <ImageView fx:id="playerBoardx3y5" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                           <ImageView fx:id="playerBoardx4y5" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                           <ImageView fx:id="playerBoardx5y5" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                           <ImageView fx:id="playerBoardx6y5" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                           <ImageView fx:id="playerBoardx7y5" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                           <ImageView fx:id="playerBoardx8y5" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+                           <ImageView fx:id="playerBoardx9y5" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+      
+                           <ImageView fx:id="playerBoardx0y6" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                           <ImageView fx:id="playerBoardx1y6" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                           <ImageView fx:id="playerBoardx2y6" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                           <ImageView fx:id="playerBoardx3y6" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                           <ImageView fx:id="playerBoardx4y6" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                           <ImageView fx:id="playerBoardx5y6" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                           <ImageView fx:id="playerBoardx6y6" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                           <ImageView fx:id="playerBoardx7y6" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                           <ImageView fx:id="playerBoardx8y6" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+                           <ImageView fx:id="playerBoardx9y6" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+      
+                           <ImageView fx:id="playerBoardx0y7" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                           <ImageView fx:id="playerBoardx1y7" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                           <ImageView fx:id="playerBoardx2y7" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                           <ImageView fx:id="playerBoardx3y7" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                           <ImageView fx:id="playerBoardx4y7" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                           <ImageView fx:id="playerBoardx5y7" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                           <ImageView fx:id="playerBoardx6y7" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                           <ImageView fx:id="playerBoardx7y7" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+                           <ImageView fx:id="playerBoardx8y7" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+                           <ImageView fx:id="playerBoardx9y7" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+      
+                           <ImageView fx:id="playerBoardx0y8" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+                           <ImageView fx:id="playerBoardx1y8" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                           <ImageView fx:id="playerBoardx2y8" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                           <ImageView fx:id="playerBoardx3y8" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                           <ImageView fx:id="playerBoardx4y8" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                           <ImageView fx:id="playerBoardx5y8" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+                           <ImageView fx:id="playerBoardx6y8" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+                           <ImageView fx:id="playerBoardx7y8" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+                           <ImageView fx:id="playerBoardx8y8" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+                           <ImageView fx:id="playerBoardx9y8" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+      
+                           <ImageView fx:id="playerBoardx0y9" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+                           <ImageView fx:id="playerBoardx1y9" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                           <ImageView fx:id="playerBoardx2y9" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                           <ImageView fx:id="playerBoardx3y9" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                           <ImageView fx:id="playerBoardx4y9" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                           <ImageView fx:id="playerBoardx5y9" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+                           <ImageView fx:id="playerBoardx6y9" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+                           <ImageView fx:id="playerBoardx7y9" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="9" />
+                           <ImageView fx:id="playerBoardx8y9" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="9" />
+                           <ImageView fx:id="playerBoardx9y9" fitHeight="32.0" fitWidth="32.0" onMouseClicked="#putShipOrRotate" onMouseEntered="#fieldHover" onMouseExited="#fieldUnHover" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="9" />
+                       </children>
+                   </GridPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="200.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="500.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <Label text="Plansza przeciwnika">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</HBox>
