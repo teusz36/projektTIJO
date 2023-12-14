@@ -85,14 +85,14 @@ public class IntegrationTests {
         Gameplay gameplay = new Gameplay(1, 1);
 
         Assertions.assertEquals(gameplay.currentTurn(), "player");
-        Assertions.assertTrue(gameplay.getPlayerBoard().shot(1, 1));
+        Assertions.assertTrue(gameplay.shot(gameplay.getPlayerBoard(),1, 1));
         Assertions.assertEquals(gameplay.currentTurn(), "player");
-        Assertions.assertFalse(gameplay.getPlayerBoard().shot(1, 2));
+        Assertions.assertFalse(gameplay.shot(gameplay.getPlayerBoard(),1, 2));
         Assertions.assertEquals(gameplay.currentTurn(), "AI");
-        Assertions.assertFalse(gameplay.getAIBoard().shot(1, 2));
-        Assertions.assertEquals(gameplay.currentTurn(), "AI");
-        Assertions.assertFalse(gameplay.getAIBoard().shot(2, 2));
+        Assertions.assertFalse(gameplay.shot(gameplay.getAIBoard(), 1, 2));
         Assertions.assertEquals(gameplay.currentTurn(), "player");
+        Assertions.assertFalse(gameplay.shot(gameplay.getAIBoard(), 2, 2));
+        Assertions.assertEquals(gameplay.currentTurn(), "AI");
     }
 
     //Test poprawności wykonywania ruchów przez AI w trafianiu do niezatopionych statków

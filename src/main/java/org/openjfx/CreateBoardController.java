@@ -156,6 +156,7 @@ public class CreateBoardController {
     @FXML
     private void startGame() throws IOException {
         App.getActiveGameplay().setPlayerBoard(board);
+        App.getActiveGameplay().generateAIBoard();
         App.setRoot("game");
     }
 

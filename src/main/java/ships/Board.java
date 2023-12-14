@@ -18,8 +18,111 @@ public class Board {
     }
 
     public boolean isShipSunk(int coordinateX, int coordinateY) {
-        return !fields.get(coordinateX + (coordinateY * 10)).isActive();
+        boolean goLeft = false, goRight = false, goUp = false, goDown = false;
+
+        if(coordinateX - 1 >= 0) {
+            goLeft = fields.get(coordinateX - 1 + (coordinateY * 10)).isShip();
+        } else {
+            goLeft = false;
+        }
+
+        if(coordinateX + 1 <= 9) {
+            goRight = fields.get(coordinateX + 1 + (coordinateY * 10)).isShip();
+        } else {
+            goRight = false;
+        }
+
+        if(coordinateY - 1 >= 0) {
+            goUp = fields.get(coordinateX + ((coordinateY - 1) * 10)).isShip();
+        } else {
+            goUp = false;
+        }
+
+        if(coordinateY + 1 <= 9) {
+            goDown = fields.get(coordinateX + ((coordinateY + 1) * 10)).isShip();
+        } else {
+            goDown = false;
+        }
+
+        if(goLeft) {
+            boolean checkNextField = true;
+            int i = -1;
+            while (checkNextField) {
+                if(coordinateX + i >= 0) {
+                    if(fields.get(coordinateX + i + (coordinateY * 10)).isShip()) {
+                        if(fields.get(coordinateX + i + (coordinateY * 10)).isActive()) {
+                            return false;
+                        }
+                        i--;
+                    } else {
+                        checkNextField = false;
+                    }
+                } else {
+                    checkNextField = false;
+                }
+            }
+        }
+
+        if(goRight) {
+            boolean checkNextField = true;
+            int i = 1;
+            while (checkNextField) {
+                if(coordinateX + i <= 9) {
+                    if(fields.get(coordinateX + i + (coordinateY * 10)).isShip()) {
+                        if(fields.get(coordinateX + i + (coordinateY * 10)).isActive()) {
+                            return false;
+                        }
+                        i++;
+                    } else {
+                        checkNextField = false;
+                    }
+                } else {
+                    checkNextField = false;
+                }
+            }
+        }
+
+        if(goUp) {
+            boolean checkNextField = true;
+            int i = -1;
+            while (checkNextField) {
+                if(coordinateY + i  >= 0) {
+                    if(fields.get(coordinateX + ((coordinateY + i) * 10)).isShip()) {
+                        if(fields.get(coordinateX + ((coordinateY + i) * 10)).isActive()) {
+                            return false;
+                        }
+                        i--;
+                    } else {
+                        checkNextField = false;
+                    }
+                } else {
+                    checkNextField = false;
+                }
+            }
+        }
+
+        if(goDown) {
+            boolean checkNextField = true;
+            int i = 1;
+            while (checkNextField) {
+                if(coordinateY + i <= 9) {
+                    if(fields.get(coordinateX + ((coordinateY + i) * 10)).isShip()) {
+                        if(fields.get(coordinateX + ((coordinateY + i) * 10)).isActive()) {
+                            return false;
+                        }
+                        i++;
+                    } else {
+                        checkNextField = false;
+                    }
+                } else {
+                    checkNextField = false;
+                }
+            }
+        }
+
+        return true;
     }
+
 
     public boolean canPlaceShip(int numberOfMasts, int coordinateX, int coordinateY, String direction) {
         try {
@@ -149,7 +252,7 @@ public class Board {
     }
 
     public boolean shot(int coordinateX, int coordinateY) {
-        return false;
+        return fields.get(coordinateX + coordinateY * 10).shot();
     }
 
     public boolean checkForShipsHit() {

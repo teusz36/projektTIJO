@@ -3,8 +3,8 @@
 # Nazwa kursu
 Testowanie i Jakość Oprogramowania (Projekt)
 
-# Autorzy
-Mateusz Tarchała i Jakub Rodak
+# Autor
+Mateusz Tarchała
 
 # Temat projektu
 Aplikacja do gry w statki
