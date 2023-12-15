@@ -14,9 +14,7 @@ public class Field {
     }
 
     public boolean shot() {
-        if(ship) {
-            active = false;
-        }
+        active = false;
         return ship;
     }
 

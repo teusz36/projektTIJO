@@ -249,18 +249,6 @@
             </HBox>
          </children>
       </VBox>
-      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="200.0">
-         <padding>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-         </padding>
-         <children>
-            <Label fx:id="labelTurn" text="Twój ruch">
-               <font>
-                  <Font size="21.0" />
-               </font>
-            </Label>
-         </children>
-      </VBox>
       <VBox alignment="CENTER" prefHeight="600.0" prefWidth="500.0">
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

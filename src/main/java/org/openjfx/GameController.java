@@ -5,8 +5,13 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import ships.AI;
 import ships.Board;
 import ships.Gameplay;
+
+import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class GameController {
@@ -17,7 +22,6 @@ public class GameController {
     @FXML
     ImageView opponentBoardx0y0, opponentBoardx0y1, opponentBoardx0y2, opponentBoardx0y3, opponentBoardx0y4, opponentBoardx0y5, opponentBoardx0y6, opponentBoardx0y7, opponentBoardx0y8, opponentBoardx0y9, opponentBoardx1y0, opponentBoardx1y1, opponentBoardx1y2, opponentBoardx1y3, opponentBoardx1y4, opponentBoardx1y5, opponentBoardx1y6, opponentBoardx1y7, opponentBoardx1y8, opponentBoardx1y9, opponentBoardx2y0, opponentBoardx2y1, opponentBoardx2y2, opponentBoardx2y3, opponentBoardx2y4, opponentBoardx2y5, opponentBoardx2y6, opponentBoardx2y7, opponentBoardx2y8, opponentBoardx2y9, opponentBoardx3y0, opponentBoardx3y1, opponentBoardx3y2, opponentBoardx3y3, opponentBoardx3y4, opponentBoardx3y5, opponentBoardx3y6, opponentBoardx3y7, opponentBoardx3y8, opponentBoardx3y9, opponentBoardx4y0, opponentBoardx4y1, opponentBoardx4y2, opponentBoardx4y3, opponentBoardx4y4, opponentBoardx4y5, opponentBoardx4y6, opponentBoardx4y7, opponentBoardx4y8, opponentBoardx4y9, opponentBoardx5y0, opponentBoardx5y1, opponentBoardx5y2, opponentBoardx5y3, opponentBoardx5y4, opponentBoardx5y5, opponentBoardx5y6, opponentBoardx5y7, opponentBoardx5y8, opponentBoardx5y9, opponentBoardx6y0, opponentBoardx6y1, opponentBoardx6y2, opponentBoardx6y3, opponentBoardx6y4, opponentBoardx6y5, opponentBoardx6y6, opponentBoardx6y7, opponentBoardx6y8, opponentBoardx6y9, opponentBoardx7y0, opponentBoardx7y1, opponentBoardx7y2, opponentBoardx7y3, opponentBoardx7y4, opponentBoardx7y5, opponentBoardx7y6, opponentBoardx7y7, opponentBoardx7y8, opponentBoardx7y9, opponentBoardx8y0, opponentBoardx8y1, opponentBoardx8y2, opponentBoardx8y3, opponentBoardx8y4, opponentBoardx8y5, opponentBoardx8y6, opponentBoardx8y7, opponentBoardx8y8, opponentBoardx8y9, opponentBoardx9y0, opponentBoardx9y1, opponentBoardx9y2, opponentBoardx9y3, opponentBoardx9y4, opponentBoardx9y5, opponentBoardx9y6, opponentBoardx9y7, opponentBoardx9y8, opponentBoardx9y9;
 
-    @FXML Label labelTurn;
 
     ImageView[][] playerBoardImageViews;
     ImageView[][] opponentBoardImageViews;
@@ -258,13 +262,13 @@ public class GameController {
             }
         }
 
-        for(int i = 0; i < 10; i++) {
+        /*for(int i = 0; i < 10; i++) {
             for(int j = 0; j < 10; j++) {
                 if(App.getActiveGameplay().getAIBoard().get(i + (j * 10)).isShip()) {
                     opponentBoardImageViews[i][j].setImage(shipModuleImage);
                 }
             }
-        }
+        }*/
     }
 
     @FXML
@@ -273,7 +277,7 @@ public class GameController {
             int x = Integer.parseInt(((ImageView) (event.getSource())).getId().charAt(14) + "");
             int y = Integer.parseInt(((ImageView) (event.getSource())).getId().charAt(16) + "");
             if(App.getActiveGameplay().getAIBoard().get(x + (y * 10)).isActive()) {
-                boolean hit = App.getActiveGameplay().getAIBoard().shot(x, y);
+                boolean hit = App.getActiveGameplay().shot(App.getActiveGameplay().getAIBoard(), x, y);
                 if(hit) {
                     opponentBoardImageViews[x][y].setImage(shipModuleHitImage);
                     if(App.getActiveGameplay().getAIBoard().isShipSunk(x, y)) {
@@ -282,9 +286,35 @@ public class GameController {
                 } else {
                     opponentBoardImageViews[x][y].setImage(missImage);
                     App.getActiveGameplay().setCurrentTurn(Gameplay.AI);
+                    AITurn();
                 }
             }
         }
+    }
+
+    @FXML
+    private void AITurn() {
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                if(App.getActiveGameplay().currentTurn().equals(Gameplay.AI)) {
+                    int[] AIShot = AI.shot(App.getActiveGameplay().getPlayerBoard());
+                    if(App.getActiveGameplay().shot(App.getActiveGameplay().getPlayerBoard(), AIShot[0], AIShot[1])) {
+                        playerBoardImageViews[AIShot[0]][AIShot[1]].setImage(shipModuleHitImage);
+                        if(App.getActiveGameplay().getPlayerBoard().isShipSunk(AIShot[0], AIShot[1])) {
+                            updateFieldsAfterSunk(App.getActiveGameplay().getPlayerBoard(), AIShot[0], AIShot[1]);
+                        }
+                        AITurn();
+                    } else {
+                        playerBoardImageViews[AIShot[0]][AIShot[1]].setImage(missImage);
+                        App.getActiveGameplay().setCurrentTurn(Gameplay.PLAYER);
+                    }
+                    timer.cancel();
+                }
+                timer.cancel();
+            }
+        }, 1000, 1000);
     }
 
     private void updateFieldsAfterSunk(Board board, int x, int y) {
@@ -327,7 +357,11 @@ public class GameController {
                                         int index = (x + i + ii) + ((y + j) * 10);
                                         if(!board.get(index).isShip()) {
                                             board.get(x + i + ii + ((y + j) * 10)).shot();
-                                            opponentBoardImageViews[x + i + ii][y + j].setImage(missImage);
+                                            if(App.getActiveGameplay().currentTurn().equals(Gameplay.PLAYER)) {
+                                                opponentBoardImageViews[x + i + ii][y + j].setImage(missImage);
+                                            } else {
+                                                playerBoardImageViews[x + i + ii][y + j].setImage(missImage);
+                                            }
                                         }
                                     } catch (IndexOutOfBoundsException indexOutOfBoundsException) {
                                     }
@@ -357,7 +391,11 @@ public class GameController {
                                         int index = (x + i + ii) + ((y + j) * 10);
                                         if(!board.get(index).isShip()) {
                                             board.get(x + i + ii + ((y + j) * 10)).shot();
-                                            opponentBoardImageViews[x + i + ii][y + j].setImage(missImage);
+                                            if(App.getActiveGameplay().currentTurn().equals(Gameplay.PLAYER)) {
+                                                opponentBoardImageViews[x + i + ii][y + j].setImage(missImage);
+                                            } else {
+                                                playerBoardImageViews[x + i + ii][y + j].setImage(missImage);
+                                            }
                                         }
                                     } catch (IndexOutOfBoundsException indexOutOfBoundsException) {
                                     }
@@ -387,7 +425,11 @@ public class GameController {
                                         int index = (x + ii) + ((y + i + j) * 10);
                                         if(!board.get(index).isShip()) {
                                             board.get(x + ii + ((y + i + j) * 10)).shot();
-                                            opponentBoardImageViews[x + ii][y + i + j].setImage(missImage);
+                                            if(App.getActiveGameplay().currentTurn().equals(Gameplay.PLAYER)) {
+                                                opponentBoardImageViews[x + ii][y + i + j].setImage(missImage);
+                                            } else {
+                                                playerBoardImageViews[x + ii][y + i + j].setImage(missImage);
+                                            }
                                         }
                                     } catch (IndexOutOfBoundsException indexOutOfBoundsException) {
                                     }
@@ -417,7 +459,11 @@ public class GameController {
                                         int index = (x + ii) + ((y + i + j) * 10);
                                         if(!board.get(index).isShip()) {
                                             board.get(x + ii + ((y + i + j) * 10)).shot();
-                                            opponentBoardImageViews[x + ii][y + i + j].setImage(missImage);
+                                            if(App.getActiveGameplay().currentTurn().equals(Gameplay.PLAYER)) {
+                                                opponentBoardImageViews[x + ii][y + i + j].setImage(missImage);
+                                            } else {
+                                                playerBoardImageViews[x + ii][y + i + j].setImage(missImage);
+                                            }
                                         }
                                     } catch (IndexOutOfBoundsException indexOutOfBoundsException) {
                                     }
@@ -442,7 +488,11 @@ public class GameController {
                             int index = (x + i) + ((y + j) * 10);
                             if (!board.get(index).isShip()) {
                                 board.get(x + i + ((y + j) * 10)).shot();
-                                opponentBoardImageViews[x + i][y + j].setImage(missImage);
+                                if(App.getActiveGameplay().currentTurn().equals(Gameplay.PLAYER)) {
+                                    opponentBoardImageViews[x + i][y + j].setImage(missImage);
+                                } else {
+                                    playerBoardImageViews[x + i][y + j].setImage(missImage);
+                                }
                             }
                         } catch (IndexOutOfBoundsException indexOutOfBoundsException) {
                         }

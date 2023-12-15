@@ -26,7 +26,7 @@ public class App extends Application {
         activeGameplay = new Gameplay();
     }
 
-    static void setRoot(String fxml) throws IOException {
+    public static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
 

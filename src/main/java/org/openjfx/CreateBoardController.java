@@ -155,9 +155,11 @@ public class CreateBoardController {
 
     @FXML
     private void startGame() throws IOException {
-        App.getActiveGameplay().setPlayerBoard(board);
-        App.getActiveGameplay().generateAIBoard();
-        App.setRoot("game");
+        if(numberOf1MastsShipsLeft == 0 && numberOf2MastsShipsLeft == 0 && numberOf3MastsShipsLeft == 0 && numberOf4MastsShipsLeft == 0) {
+            App.getActiveGameplay().setPlayerBoard(board);
+            App.getActiveGameplay().generateAIBoard(1);
+            App.setRoot("game");
+        }
     }
 
     @FXML

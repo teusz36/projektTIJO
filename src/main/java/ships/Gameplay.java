@@ -1,8 +1,11 @@
 package ships;
 
+import org.openjfx.App;
+
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Objects;
 import java.util.Random;
 
@@ -11,7 +14,7 @@ public class Gameplay {
     private Board playerBoard;
     private boolean gameActive;
     private String currentTurn;
-    private String winner;
+    public String winner;
 
     public static final String PLAYER = "player";
     public static final String AI = "AI";
@@ -117,6 +120,20 @@ public class Gameplay {
                 currentTurn = Gameplay.AI;
             } else {
                 currentTurn = Gameplay.PLAYER;
+            }
+        } else {
+            if(board.isBoardCleared()) {
+                gameActive = false;
+                if(Objects.equals(currentTurn, Gameplay.PLAYER)) {
+                    winner = Gameplay.PLAYER;
+                } else {
+                    winner = Gameplay.AI;
+                }
+                try {
+                    App.setRoot("win_screen");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
         return hit;

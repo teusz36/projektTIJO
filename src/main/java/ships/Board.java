@@ -1,7 +1,11 @@
 package ships;
 
+import java.io.BufferedInputStream;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.Dictionary;
+import java.util.Random;
 
 public class Board {
     public static final String UP = "UP";
@@ -244,18 +248,92 @@ public class Board {
     }
 
     public Board generateAIBoard() {
-        return new Board();
+        Board AIBoard = new Board();
+        Random rand = new Random();
+        int boardNumber = rand.nextInt(10);
+        String fileLine;
+        String fileName = "./AIplansze/AI_plansza_"+boardNumber+".txt";
+        try {
+            DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream(fileName)));
+            fileLine = in.readLine();
+            in.close();
+            for(int i=0; i< 100; i++){
+                if(fileLine.charAt(i) != '0'){
+                    AIBoard.get(i).ship(true);
+                }
+            }
+        } catch (Exception e){
+            System.out.println("Brak pliku");
+        }
+        return AIBoard;
     }
 
-    public Board generateAIBoard(int i) {
-        return new Board();
+    public Board generateAIBoard(int boardNumber) {
+        Board AIBoard = new Board();
+        String fileLine;
+        String fileName = "./AIplansze/AI_plansza_"+boardNumber+".txt";
+        try {
+            DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream(fileName)));
+            fileLine = in.readLine();
+            in.close();
+            for(int i=0; i< 100; i++){
+                if(fileLine.charAt(i) != '0'){
+                    AIBoard.get(i).ship(true);
+                }
+            }
+        } catch (Exception e){
+            System.out.println("Brak pliku");
+        }
+        return AIBoard;
     }
 
     public boolean shot(int coordinateX, int coordinateY) {
         return fields.get(coordinateX + coordinateY * 10).shot();
     }
 
+    public boolean isBoardCleared() {
+        for(Field field: fields) {
+            if(field.isShip() && field.isActive()) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public boolean checkForShipsHit() {
+        int coordinateX = 0, coordinateY = 0;
+        for(Field field: fields) {
+            if(field.isShip() && !field.isActive()) {
+                if(coordinateX - 1 >= 0) {
+                    if(fields.get(coordinateX - 1 + (coordinateY * 10)).isShip() && fields.get(coordinateX - 1 + (coordinateY * 10)).isActive()) {
+                        return true;
+                    }
+                }
+
+                if(coordinateX + 1 <= 9) {
+                    if(fields.get(coordinateX + 1 + (coordinateY * 10)).isShip() && fields.get(coordinateX + 1 + (coordinateY * 10)).isActive()) {
+                        return true;
+                    }
+                }
+
+                if(coordinateY - 1 >= 0) {
+                    if(fields.get(coordinateX + ((coordinateY - 1) * 10)).isShip() && fields.get(coordinateX + ((coordinateY - 1) * 10)).isActive()) {
+                        return true;
+                    }
+                }
+
+                if(coordinateY + 1 <= 9) {
+                    if(fields.get(coordinateX + ((coordinateY + 1) * 10)).isShip() && fields.get(coordinateX + ((coordinateY + 1) * 10)).isActive()) {
+                        return true;
+                    }
+                }
+            }
+            coordinateX++;
+            if(coordinateX > 9) {
+                coordinateX = 0;
+                coordinateY++;
+            }
+        }
         return false;
     }
 

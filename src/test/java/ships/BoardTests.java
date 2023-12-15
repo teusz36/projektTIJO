@@ -53,8 +53,8 @@ public class BoardTests {
     public void isShipSunk() {
         //Na wygenerowanej w ten sposób planszy na podanych koordynatach znajduje się jednomasztowy statek
         Board board = new Board().generateAIBoard(1);
-        int coordinateX = 4;
-        int coordinateY = 5;
+        int coordinateX = 1;
+        int coordinateY = 1;
 
         boolean result = board.isShipSunk(coordinateX, coordinateY);
 
@@ -67,7 +67,7 @@ public class BoardTests {
         //Na wygenerowanej w ten sposób planszy na podanych koordynatach znajduje się dwumasztowy statek
         Board board = new Board().generateAIBoard(1);
         int coordinateX = 3;
-        int coordinateY = 6;
+        int coordinateY = 3;
 
         board.shot(coordinateX, coordinateY);
         boolean result = board.checkForShipsHit();
