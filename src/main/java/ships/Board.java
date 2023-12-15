@@ -202,7 +202,7 @@ public class Board {
                 if(!(i == 0 && j == 0)) {
                     int index = x + i + ((y + j) * 10);
                     try {
-                        if (x + i >= 0 && x + i <= 10 && y + j >= 0 && y + j <= 10) {
+                        if (x + i >= 0 && x + i <= 9 && y + j >= 0 && y + j <= 9) {
                             if (fields.get(index) != null) {
                                 if (fields.get(index).isShip()) {
                                     return true;
