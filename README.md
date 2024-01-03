@@ -15,9 +15,13 @@ Jeśli gracz lub AI trafi, wszystkie statki przeciwnika wygrywa i gra się końc
 
 # Uruchomienie projektu
 
+mvn clear install
+
+mvn javafx:run
+
 # Uruchomienie testów jednostkowych i integracyjnych
 
-# Dokumentacja API
+mvn test
 
 # Scenariusze testowe dla testera manualnego
 | Test Case ID | Opis | Kroki testowe | Oczekiwany wynik |

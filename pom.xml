@@ -7,6 +7,7 @@
     <groupId>org.openjfx</groupId>
     <artifactId>tijoprojekt</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -70,6 +71,7 @@
                     <mainClass>tijoprojekt/org.openjfx.App</mainClass>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 

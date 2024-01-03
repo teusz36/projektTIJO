@@ -2,6 +2,7 @@ package ships;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.openjfx.App;
 
 public class IntegrationTests {
     //Sprawdzenie poprawności rozpoczęcia rozgrywki
