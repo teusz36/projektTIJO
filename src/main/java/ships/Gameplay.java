@@ -130,14 +130,12 @@ public class Gameplay {
                     winner = Gameplay.AI;
                 }
                 try {
-                    System.out.println("test1");
                     App.setRoot("win_screen");
                 } catch (ExceptionInInitializerError e) {
                     //aplikacja uruchomiona z poziomu testów - brak interfejsu
                 } catch (NoClassDefFoundError e) {
                     //aplikacja uruchomiona z poziomu testów - brak interfejsu
                 } catch (Exception e) {
-                    System.out.println("test2");
                     e.printStackTrace();
                 }
             }
